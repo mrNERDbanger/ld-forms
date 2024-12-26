@@ -1,0 +1,14 @@
+{
+    "name": "lccp/foundations",
+    "description": "Core functionality for the LCCP platform",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4",
+        "mpdf/mpdf": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LCCP\\Foundations\\": "includes/"
+        }
+    }
+} 

@@ -1,0 +1,92 @@
+/* LCCP Forms Styles
+--------------------------------------------- */
+
+.lccp-form {
+    background: var(--bb-content-background-color, #ffffff);
+    border: 1px solid var(--bb-content-border-color, #e7e9ec);
+    border-radius: var(--bb-block-radius, 4px);
+    padding: var(--bb-block-spacing, 20px);
+    margin-bottom: var(--bb-spacing-4, 1.5rem);
+}
+
+.lccp-form-header {
+    color: var(--bb-heading-color, #122b46);
+    font-family: var(--bb-font-family-heading, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+    font-size: var(--bb-h3-font-size, 1.5rem);
+    font-weight: var(--bb-font-weight-heading, 500);
+    margin-bottom: var(--bb-spacing-3, 1rem);
+}
+
+.lccp-form-field {
+    margin-bottom: var(--bb-spacing-3, 1rem);
+}
+
+.lccp-form-label {
+    color: var(--bb-label-color, #4d5c6d);
+    display: block;
+    font-size: var(--bb-label-font-size, 14px);
+    font-weight: var(--bb-font-weight-medium, 500);
+    margin-bottom: var(--bb-spacing-1, 0.5rem);
+}
+
+.lccp-form-input {
+    background-color: var(--bb-content-background-color, #ffffff);
+    border: 1px solid var(--bb-content-border-color, #e7e9ec);
+    border-radius: var(--bb-input-radius, 3px);
+    color: var(--bb-body-text-color, #4d5c6d);
+    font-size: var(--bb-body-font-size, 14px);
+    padding: var(--bb-input-spacing, 8px 12px);
+    width: 100%;
+}
+
+.lccp-form-input:focus {
+    border-color: var(--bb-primary-color, #385DFF);
+    box-shadow: 0 0 0 1px var(--bb-primary-color, #385DFF);
+    outline: none;
+}
+
+.lccp-form-button {
+    background-color: var(--bb-primary-color, #385DFF);
+    border: 1px solid var(--bb-primary-color, #385DFF);
+    border-radius: var(--bb-button-radius, 3px);
+    color: var(--bb-primary-button-text-color, #ffffff);
+    cursor: pointer;
+    font-size: var(--bb-button-font-size, 14px);
+    font-weight: var(--bb-font-weight-medium, 500);
+    padding: var(--bb-button-spacing, 8px 16px);
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+}
+
+.lccp-form-button:hover {
+    background-color: var(--bb-primary-color-hover, #1b43f3);
+    border-color: var(--bb-primary-color-hover, #1b43f3);
+}
+
+.lccp-form-error {
+    color: var(--bb-error-color, #ef3e46);
+    font-size: var(--bb-body-font-size, 14px);
+    margin-top: var(--bb-spacing-2, 0.5rem);
+}
+
+.lccp-form-success {
+    color: var(--bb-success-color, #14b550);
+    font-size: var(--bb-body-font-size, 14px);
+    margin-top: var(--bb-spacing-2, 0.5rem);
+}
+
+/* Form in Course Context */
+.sfwd-courses .lccp-form {
+    margin-top: var(--bb-spacing-4, 1.5rem);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .lccp-form {
+        padding: var(--bb-block-spacing-sm, 15px);
+    }
+    
+    .lccp-form-header {
+        font-size: var(--bb-h4-font-size, 1.25rem);
+    }
+} 

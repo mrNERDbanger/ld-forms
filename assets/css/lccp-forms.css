@@ -1,0 +1,288 @@
+/**
+ * LCCP Forms Styles
+ * Uses BuddyBoss variables with neutral tone fallbacks
+ */
+
+/* Form Container */
+.lccp-form-container {
+    --lccp-primary: var(--bb-primary-color, #385DFF);
+    --lccp-primary-hover: var(--bb-primary-color-hover, #1B44FF);
+    --lccp-text: var(--bb-body-text-color, #4D5C6D);
+    --lccp-border: var(--bb-content-border-color, #E7E9EC);
+    --lccp-background: var(--bb-content-background-color, #FFFFFF);
+    --lccp-success: var(--bb-success-color, #14B550);
+    --lccp-error: var(--bb-error-color, #EF3E46);
+    --lccp-warning: var(--bb-warning-color, #F7BA45);
+    --lccp-info: var(--bb-info-color, #1E67D5);
+
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--lccp-background);
+    border: 1px solid var(--lccp-border);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Header */
+.lccp-form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--lccp-border);
+}
+
+.lccp-form-title {
+    color: var(--lccp-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.lccp-form-description {
+    color: var(--lccp-text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Form Sections */
+.form-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--bb-content-alternate-background-color, #F7F7F7);
+    border-radius: 4px;
+}
+
+h2.form-section {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--lccp-text);
+    margin: 2rem 0 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--bb-content-alternate-background-color, #F7F7F7);
+    border-left: 4px solid var(--lccp-primary);
+}
+
+/* Form Fields */
+.lccp-form-field {
+    margin-bottom: 1.5rem;
+}
+
+.lccp-form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--lccp-text);
+    font-weight: 500;
+}
+
+.lccp-form-field input[type="text"],
+.lccp-form-field input[type="email"],
+.lccp-form-field input[type="number"],
+.lccp-form-field input[type="date"],
+.lccp-form-field input[type="tel"],
+.lccp-form-field input[type="url"],
+.lccp-form-field textarea,
+.lccp-form-field select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--lccp-border);
+    border-radius: 3px;
+    background: var(--lccp-background);
+    color: var(--lccp-text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.lccp-form-field input:focus,
+.lccp-form-field textarea:focus,
+.lccp-form-field select:focus {
+    outline: none;
+    border-color: var(--lccp-primary);
+    box-shadow: 0 0 0 2px rgba(56, 93, 255, 0.1);
+}
+
+/* Textarea */
+.lccp-form-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Select */
+.lccp-form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234D5C6D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+/* Radio and Checkbox */
+.lccp-form-field input[type="radio"],
+.lccp-form-field input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.lccp-form-field .radio-group,
+.lccp-form-field .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lccp-form-field .radio-option,
+.lccp-form-field .checkbox-option {
+    display: flex;
+    align-items: center;
+}
+
+/* File Upload */
+.lccp-form-field input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px dashed var(--lccp-border);
+    border-radius: 3px;
+    background: var(--bb-content-alternate-background-color, #F7F7F7);
+    cursor: pointer;
+}
+
+.lccp-form-field input[type="file"]:hover {
+    border-color: var(--lccp-primary);
+}
+
+/* Slider */
+.lccp-form-field input[type="range"] {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.lccp-form-field .slider-value {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: var(--lccp-primary);
+    color: white;
+    border-radius: 3px;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+/* Required Field */
+.lccp-form-field.required label::after {
+    content: "*";
+    color: var(--lccp-error);
+    margin-left: 0.25rem;
+}
+
+/* Field Description */
+.lccp-form-field .field-description {
+    font-size: 0.875rem;
+    color: var(--bb-alternate-text-color, #A3A5A9);
+    margin-top: 0.25rem;
+}
+
+/* Submit Button */
+.lccp-form-submit {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.lccp-form-submit button {
+    padding: 0.75rem 1.5rem;
+    background: var(--lccp-primary);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lccp-form-submit button:hover {
+    background: var(--lccp-primary-hover);
+}
+
+.lccp-form-submit button:disabled {
+    background: var(--bb-content-inactive-color, #C8CBCF);
+    cursor: not-allowed;
+}
+
+/* Messages */
+.lccp-form-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.lccp-form-message.success {
+    background: color-mix(in srgb, var(--lccp-success) 10%, transparent);
+    border: 1px solid var(--lccp-success);
+    color: var(--lccp-success);
+}
+
+.lccp-form-message.error {
+    background: color-mix(in srgb, var(--lccp-error) 10%, transparent);
+    border: 1px solid var(--lccp-error);
+    color: var(--lccp-error);
+}
+
+.lccp-form-message.warning {
+    background: color-mix(in srgb, var(--lccp-warning) 10%, transparent);
+    border: 1px solid var(--lccp-warning);
+    color: var(--lccp-warning);
+}
+
+.lccp-form-message.info {
+    background: color-mix(in srgb, var(--lccp-info) 10%, transparent);
+    border: 1px solid var(--lccp-info);
+    color: var(--lccp-info);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .lccp-form-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .lccp-form-field .radio-group,
+    .lccp-form-field .checkbox-group {
+        gap: 0.75rem;
+    }
+
+    .lccp-form-submit {
+        text-align: center;
+    }
+
+    .lccp-form-submit button {
+        width: 100%;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .lccp-form-container {
+        --lccp-text: var(--bb-body-text-color, #E0E0E0);
+        --lccp-border: var(--bb-content-border-color, #3A3A3A);
+        --lccp-background: var(--bb-content-background-color, #2A2A2A);
+    }
+
+    .lccp-form-field input[type="text"],
+    .lccp-form-field input[type="email"],
+    .lccp-form-field input[type="number"],
+    .lccp-form-field input[type="date"],
+    .lccp-form-field input[type="tel"],
+    .lccp-form-field input[type="url"],
+    .lccp-form-field textarea,
+    .lccp-form-field select {
+        background: var(--bb-content-alternate-background-color, #333333);
+    }
+
+    .lccp-form-field input[type="file"] {
+        background: var(--bb-content-alternate-background-color, #333333);
+    }
+
+    .lccp-form-message {
+        background: var(--bb-content-alternate-background-color, #333333);
+    }
+} 
